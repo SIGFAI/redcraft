@@ -1,0 +1,162 @@
+{
+  "id": "sigf/redcraft",
+  "version": "3.0.0",
+  "name": "RedCraft",
+  "tagline": "Minecraft inside Red Dead Redemption 2 story mode: walk, build, break, hit people and animals with Minecraft's weapons and set off TNT as real explosions (Script Hook RDR2 ASI + SkyCraft's Fabric mod).",
+  "kind": "passthrough",
+  "games": [
+    {
+      "game": "rdr2",
+      "role": "host",
+      "label": "Red Dead Redemption 2",
+      "engine": "Red Dead Redemption 2 (RAGE, DirectX 12) + Script Hook RDR2 ASI (C++)",
+      "apps": {
+        "steam": "1174180"
+      },
+      "runtime": "story mode, DirectX 12, game 1.0.1491.50"
+    },
+    {
+      "game": "minecraft",
+      "role": "guest",
+      "label": "Minecraft",
+      "mc": "26.3",
+      "loader": "fabric@0.19.5",
+      "java": "25"
+    }
+  ],
+  "requires": [
+    {
+      "id": "scripthookrdr2",
+      "version": "1.0.1491.17",
+      "page": "http://www.dev-c.com/rdr2/scripthookrdr2/",
+      "license": "proprietary, no redistribution: linked, not shipped",
+      "note": "copy ScriptHookRDR2.dll and dinput8.dll from its bin folder next to RDR2.exe; take the build that supports your game version"
+    },
+    {
+      "id": "reshade",
+      "page": "https://reshade.me",
+      "optional": true,
+      "license": "linked, not shipped",
+      "note": "the \"with full add-on support\" installer, RDR2.exe, DirectX 10/11/12, no effect packages: blocks then hide behind the world"
+    },
+    {
+      "id": "fabric-loader",
+      "version": "0.19.5"
+    },
+    {
+      "id": "fabric-api",
+      "version": "0.161.0+26.3",
+      "note": "in the Minecraft pack (downloaded from Modrinth)"
+    }
+  ],
+  "install": [
+    {
+      "game": "rdr2",
+      "strategy": "game-dir-snapshot",
+      "loader": "scripthookrdr2",
+      "files": [
+        {
+          "src": "RedCraft.zip",
+          "dst": "{game}",
+          "root": "RedCraft",
+          "unpack": true,
+          "contents": [
+            {
+              "path": "RedCraft/README.txt",
+              "sha256": "daee136ce5f0ae0a4c96fbf516bbc71ae2f7c212952b64d2278db261e2317e59"
+            },
+            {
+              "path": "RedCraft/RedCraft.asi",
+              "sha256": "7c0fe25c7e7190c1b628769f5d71fc313865c78803fe095f20285d63bd3b161d"
+            },
+            {
+              "path": "RedCraft/reshade-shaders/Shaders/RedCraft.fx",
+              "sha256": "fcbcbff0bc2e96f40ffca60d9c52e86b21dc9264561863d2facac18cd0a88c01"
+            },
+            {
+              "path": "RedCraft/RedCraft-source.zip",
+              "sha256": "6eadf1a436188f9e4c1243419108830575edd6871b7690ecd1d2f87b17d68269"
+            }
+          ],
+          "url": "https://github.com/Keel62155/Minecraft-X-Games/releases/download/3.0.0-RedCraft/RedCraft.zip",
+          "sha256": "f003eb89654b7d3ac09c6fd211cf9902c46c7c68d4f18156bcfb9b63038901d1",
+          "size": 149274
+        }
+      ]
+    },
+    {
+      "game": "minecraft",
+      "strategy": "mrpack",
+      "pack": {
+        "src": "redcraft.mrpack",
+        "url": "https://github.com/SIGFAI/redcraft/releases/download/v3.0.0/redcraft.mrpack",
+        "sha256": "34ff700cab2d838284bd377ec2b00b337761b44c2b1d90a94b45badeb6e9ce72",
+        "size": 235728
+      }
+    }
+  ],
+  "launch": [
+    {
+      "game": "minecraft"
+    },
+    {
+      "game": "rdr2",
+      "args": []
+    }
+  ],
+  "files": [
+    {
+      "name": "RedCraft.zip",
+      "url": "https://github.com/Keel62155/Minecraft-X-Games/releases/download/3.0.0-RedCraft/RedCraft.zip",
+      "sha256": "f003eb89654b7d3ac09c6fd211cf9902c46c7c68d4f18156bcfb9b63038901d1",
+      "size": 149274
+    },
+    {
+      "name": "redcraft.mrpack",
+      "url": "https://github.com/SIGFAI/redcraft/releases/download/v3.0.0/redcraft.mrpack",
+      "sha256": "34ff700cab2d838284bd377ec2b00b337761b44c2b1d90a94b45badeb6e9ce72",
+      "size": 235728
+    }
+  ],
+  "source": {
+    "repo": "https://github.com/Keel62155/Minecraft-X-Games",
+    "license": "No license (upstream download) + MIT",
+    "upstream_license": null,
+    "fetch": "upstream",
+    "tag": "3.0.0-RedCraft",
+    "commit": "0d6e51bf7babc88a7f9cfe730594206bac1e6e71",
+    "hosted": "https://github.com/SIGFAI/redcraft",
+    "based_on": "https://github.com/chasmlol/SkyCraft",
+    "bundled": [
+      {
+        "name": "SkyCraft (Fabric mod)",
+        "version": "0.1.2",
+        "repo": "https://github.com/chasmlol/SkyCraft",
+        "commit": "bfcaf178524b92c2cdeb88e4ce0f13ef9ded6f32",
+        "license": "MIT"
+      }
+    ]
+  },
+  "media": {},
+  "built_by": {
+    "author": "Keel62155",
+    "authors": [
+      "Keel62155",
+      "chasmlol"
+    ],
+    "packaged_by": "SIGF"
+  },
+  "idea_by": "Keel62155",
+  "built_at": "2026-10-05T00:00:00.000Z",
+  "status": "beta",
+  "issues": "https://github.com/Keel62155/Minecraft-X-Games/issues",
+  "notes": [
+    "Red Dead Redemption 2 on PC (made on game 1.0.1491.50) and Minecraft: Java Edition. Story mode only: Script Hook RDR2 closes the game if you go into Red Dead Online.",
+    "Before the first Play: install Script Hook RDR2 from its official page (ScriptHookRDR2.dll and dinput8.dll next to RDR2.exe; the app cannot ship it) and set Graphics API to DirectX 12 in the game's settings (Graphics > Advanced): on Vulkan nothing of Minecraft shows.",
+    "Recommended: ReShade with full add-on support (reshade.me, pick RDR2.exe and DirectX 10/11/12, skip the effect packages). The app already places RedCraft.fx in reshade-shaders\\Shaders. Without ReShade blocks are drawn over everything. If blocks still show through the world: Home > Add-ons > Generic Depth, tick the depth buffer that shows the scene.",
+    "Press Play: Minecraft starts first as the app's own Prism instance \"sigf-redcraft\" (SkyCraft's Fabric mod, Minecraft 26.3, Java 25), then RDR2. You do not need SkyCraft or Skyrim. Load a story save on foot and wait about 30 seconds for Minecraft's hotbar.",
+    "RedCraft.asi and RedCraft.fx (with the author's README.txt and source zip) are installed into the game folder, downloaded from the author's own release; Restore removes them. Script Hook RDR2 and ReShade are yours to remove.",
+    "Riding, driving and cutscenes hand the character back to the game; hold Left Alt to talk, loot or mount, F10 gives the character back. Run one \"Minecraft X\" mod at a time. Log: %LOCALAPPDATA%\\RedCraft\\redcraft.log.",
+    "Prototype; the ReShade part is new and HDR output limits it. Report bugs to the author on the upstream issue tracker."
+  ]
+}
