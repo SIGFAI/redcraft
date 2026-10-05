@@ -3,6 +3,12 @@
   "version": "3.0.0",
   "name": "RedCraft",
   "tagline": "Minecraft inside Red Dead Redemption 2 story mode: walk, build, break, hit people and animals with Minecraft's weapons and set off TNT as real explosions (Script Hook RDR2 ASI + SkyCraft's Fabric mod).",
+  "how_to_play": [
+    "Play Minecraft inside Red Dead Redemption 2's story mode: build on its world and fight people and animals with Minecraft weapons and TNT.",
+    "WASD, Space and Shift move, left click breaks or hits, right click places or uses, 1-9 or wheel hotbar, E inventory, O Minecraft menu.",
+    "Hold Left Alt to be the RDR2 character (talk, loot, mount); F10 gives the character back to the game.",
+    "Press Play: Minecraft starts first, then RDR2. Load a story save on foot and wait about 30 seconds for the hotbar."
+  ],
   "kind": "passthrough",
   "games": [
     {
