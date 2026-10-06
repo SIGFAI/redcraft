@@ -161,6 +161,7 @@
     "Minecraft runs hidden next to the game (the app's own instance; you do not need SkyCraft or Skyrim), and the game's damage comes off Minecraft's hearts.",
     "You need RDR2 on PC (made on 1.0.1491.50) and Minecraft: Java Edition. Install Script Hook RDR2 yourself (ScriptHookRDR2.dll and dinput8.dll next to RDR2.exe) and set Graphics API to DirectX 12 (Graphics > Advanced): on Vulkan nothing of Minecraft shows.",
     "Recommended: ReShade with full add-on support (pick RDR2.exe, DirectX 10/11/12, no effect packages); the app already places RedCraft.fx. Without it blocks draw over everything. If blocks still show through the world: Home > Add-ons > Generic Depth, tick the depth buffer that shows the scene.",
-    "Story mode only: Script Hook closes the game if you enter Red Dead Online. Riding, driving and cutscenes hand the character back to the game; HDR output weakens the alignment. Run one \"Minecraft X\" mod at a time. Restore leaves Script Hook and ReShade. Prototype: report bugs to the author."
+    "Story mode only: Script Hook closes the game if you enter Red Dead Online. Riding, driving and cutscenes hand the character back to the game; HDR output weakens the alignment. Run one \"Minecraft X\" mod at a time. Restore leaves Script Hook and ReShade. Prototype: report bugs to the author.",
+    "No free SIGF server for this mashup: the SkyCraft Minecraft mod in its pack crashes on a hosted (Linux) server. Play it in your own Minecraft world."
   ]
 }
