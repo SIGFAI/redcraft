@@ -56,6 +56,15 @@
       "note": "in the Minecraft pack (downloaded from Modrinth)"
     }
   ],
+  "requires_files": [
+    {
+      "id": "scripthookrdr2",
+      "game": "rdr2",
+      "path": "{game}/ScriptHookRDR2.dll",
+      "message": "Install Script Hook RDR2 for your game version first",
+      "page": "https://www.dev-c.com/rdr2/scripthookrdr2/"
+    }
+  ],
   "install": [
     {
       "game": "rdr2",
